@@ -38,6 +38,29 @@ dataset = pandas.read_csv(url,names=column_names)
 # output = (150, 5)
 print(dataset.shape)
 print('__________________________________________________________________________')
+#OUTPUT
+#sepal-length  sepal-width  petal-length  petal-width        class
+#0            5.1          3.5           1.4          0.2  Iris-setosa
+#1            4.9          3.0           1.4          0.2  Iris-setosa
+#2            4.7          3.2           1.3          0.2  Iris-setosa
+#3            4.6          3.1           1.5          0.2  Iris-setosa
+#4            5.0          3.6           1.4          0.2  Iris-setosa
+#5            5.4          3.9           1.7          0.4  Iris-setosa
+#6            4.6          3.4           1.4          0.3  Iris-setosa
+#7            5.0          3.4           1.5          0.2  Iris-setosa
+#8            4.4          2.9           1.4          0.2  Iris-setosa
+#9            4.9          3.1           1.5          0.1  Iris-setosa
+#10           5.4          3.7           1.5          0.2  Iris-setosa
+#11           4.8          3.4           1.6          0.2  Iris-setosa
+#12           4.8          3.0           1.4          0.1  Iris-setosa
+#13           4.3          3.0           1.1          0.1  Iris-setosa
+#14           5.8          4.0           1.2          0.2  Iris-setosa
+#15           5.7          4.4           1.5          0.4  Iris-setosa
+#16           5.4          3.9           1.3          0.4  Iris-setosa
+#17           5.1          3.5           1.4          0.3  Iris-setosa
+#18           5.7          3.8           1.7          0.3  Iris-setosa
+#19           5.1          3.8           1.5          0.3  Iris-setosa
+__________________________________________________________________________
 print(dataset.head(20))
 print('__________________________________________________________________________') 	
 # descriptions
