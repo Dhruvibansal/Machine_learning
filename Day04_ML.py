@@ -124,10 +124,10 @@ plt.boxplot(results)
 plt.show()
 ##print('__________________________________________________________________________')
 ##
-### Make predictions on validation dataset
+### Make predictions on validation dataset (making models here of knn type)
 knn = KNeighborsClassifier()
 
-''' Apply fitting the data on the model'''
+''' Apply fitting the data on the model always on training dataset'''
 knn.fit(X_train, Y_train)
 
 '''Deploy or say apply predict on your model'''
