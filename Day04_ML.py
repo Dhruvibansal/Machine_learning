@@ -134,6 +134,13 @@ knn.fit(X_train, Y_train)
 predictions = knn.predict(X_validation)
 print(predictions)
 print(accuracy_score(Y_validation, predictions))
+#it tells how much accuracy is in our model
 print(confusion_matrix(Y_validation, predictions))
+#accurate v/s predicted data = confusion matrix 
 print(classification_report(Y_validation, predictions))
 ##
+p=list(predictions)
+p.count('iris-virginica')
+# to know the count of verginica tht is 10
+ p.count('Iris-setosa')
+# 7
