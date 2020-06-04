@@ -35,6 +35,7 @@ from sklearn.svm import SVC
 url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
 column_names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
 dataset = pandas.read_csv(url,names=column_names)
+# output = (150, 5)
 print(dataset.shape)
 print('__________________________________________________________________________')
 print(dataset.head(20))
