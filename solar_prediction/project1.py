@@ -3,10 +3,8 @@ import matplotlib.pyplot as plt
 cols=['Radiation','Temperature','TimeSunRise','TimeSunSet']
 data=pd.read_csv('SolarPrediction1.csv')
 x=data[cols]
+##
 
-#print(date:solarhours)
-
-#print(x)
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -15,10 +13,20 @@ rad=data['Radiation']
 temp=data['Temperature']
 time=data['Time']
 
+plt.subplot(131)
 plt.scatter(time[:200],rad[:200],color='r')
-plt.scatter(time[:200],temp[:200],color='g')
+plt.xlabel('Time')
+plt.ylabel('Radiation')
+plt.title('Time vs Radiation')
 
-plt.show()
+
+plt.subplot(132)
+plt.scatter(time[:200],temp[:200],color='g')
+plt.xlabel('Time')
+plt.ylabel('Temperature')
+plt.title('Time vs Temperature')
+
+#plt.show()
 
 df=pd.read_csv('SolarPrediction1.csv')
 uniq=["Data"]
@@ -32,10 +40,12 @@ newdiff=diff
 print(diff[0])
 newdiff[0].to_csv('SolarPrediction.csv')
 
-plt.subplot(131)
-plt.subplot(132)
 plt.subplot(133)
+
 plt.plot(newdiff[0])
+plt.xlabel('Time')
+plt.ylabel('Solar Hours')
+plt.title('Time vs Solar Hours')
 plt.show()
 #print(df.data)
 #lst=[df.Data,diff[0]]
