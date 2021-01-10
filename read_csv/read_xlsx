@@ -1,0 +1,24 @@
+import pandas as pd
+##from pandas import read_excel
+import xlsxwriter
+import xlrd,openpyxl
+file_name = 'copyuser3.xlsx'
+##df1=pd.read_csv('sample.csv')
+df1 = pd.read_excel(file_name)
+df2=pd.read_csv('Vocab.csv')
+lstimage=list(df1['Image_Name'])
+lstvals=dict(df2['Values'])
+changed_img=[]
+for image_name in lstimage:
+    new_image=image_name.split('-')
+    searchval=int(new_image[2])
+    if searchval in list(lstvals.keys()):
+        new_image[2]=lstvals[searchval]
+    img=''
+    changed_img.append(img.join(new_image))
+
+df1['Image_Name'] = df1['Image_Name'].replace(lstimage, changed_img)
+##df1.to_csv('sample.csv')
+df1.to_excel(file_name,index=True)
+
+
